@@ -1,0 +1,76 @@
+Spaces, blank lines, and tabs in a program.
+What is white space?
+100
+A statement that executes a block of code repeatedly.
+What is a loop?
+200
+An ordered list of values.
+What is an array?
+300
+Finds the number of values in an array list.
+What is size()?
+400
+Finds the number of values in a string.
+What is length()?
+500
+Mao Zedong formed a political party based on this type of government.
+What is communism?
+100
+This is the longest man-made structure in the world, located in China.
+What is the Great Wall of China?
+200
+Qin Shi Huang, first emperor of China, created an army made out of this material.
+What is terracotta?
+300
+This is the official name of China.
+What is People's Republic of China?
+400
+The main character of this story is Sun Wukong.
+What is Journey to the West?
+500
+This is the action of dropping one's face into the elbow while raising the opposite arm.
+What is dabbing?
+100
+This is the action of raising both arms to immitate a consonant.
+What is t-posing?
+200
+This dance can be seen as a funny dance that is given to new players in the game Fortnite.
+What is default dance?
+300
+A meme includes a man dressed as Spiderman shouting a certain phrase talking about the current day.
+What is It's Wednesday My Dudes?
+400
+This meme is the action of placing the thumb and index finger in a check mark on the chin.
+What is thonk?
+500
+This game involves the building of structures and to get a victory royale.
+What is Fortnite?
+100
+This is the first battle royale game to be created.
+What is Minecraft Survival Games?
+200
+This class from Destiny 2 is able to fly and use magic.
+What is a Warlock?
+300
+This is character in league of legends is a ghost like chain warden who collects souls.
+Who is Thresh?
+400
+This is a 9 crystal shaman card in Hearthstone in which the card activates a previously used battlecries.
+What is Shudderwock?
+500
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
