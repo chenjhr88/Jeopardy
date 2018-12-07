@@ -1,5 +1,10 @@
 package jeopardy;
 
-public class Board {
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
+public class Board {
+	
+	
 }
