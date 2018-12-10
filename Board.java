@@ -12,25 +12,25 @@ public class Board extends JPanel
 			
 			JLabel cs = new JLabel("COMSCI A");
 			this.add(cs);	
-			cs.setBounds(100,0,100,100);
+			cs.setBounds(125,0,100,100);
 			
-			JLabel china = new JLabel("COMSCI A");
+			JLabel china = new JLabel("CHINA");
 			this.add(china);	
-			china.setBounds(250,0,100,100);
+			china.setBounds(275,0,100,100);
 			
-			JLabel meme = new JLabel("COMSCI A");
+			JLabel meme = new JLabel("MEMES");
 			this.add(meme);	
-			meme.setBounds(400,0,100,100);
+			meme.setBounds(425,0,100,100);
 			
-			JLabel game = new JLabel("COMSCI A");
+			JLabel game = new JLabel("GAMES");
 			this.add(game);	
-			game.setBounds(550,0,100,100);
+			game.setBounds(575,0,100,100);
 			
 			//cs
 			
 			
 			JButton cs1 = new JButton("100");
-			cs1.setLayout(null);
+			
 
 			
 			cs1.setBounds(100,100,100,100);
@@ -58,67 +58,72 @@ public class Board extends JPanel
 			cs5.setBounds(100,700,100,100);
 			
 			this.add(cs5);
-			
-			JButton cs6 = new JButton("100");
-			cs6.setBounds(250,100,100,100);
-			
+
 			//china
 			
-			JButton c1 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton c1 = new JButton("100");
+			c1.setBounds(250,100,100,100);
 			this.add(c1);
-			JButton c2 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			
+			JButton c2 = new JButton("200");
+			c2.setBounds(250,250,100,100);
 			this.add(c2);
-			JButton c3 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			
+			JButton c3 = new JButton("300");
+			c3.setBounds(250,400,100,100);
 			this.add(c3);
-			cs5.setBounds(100,700,100,100);
-			JButton c4 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			
+			JButton c4 = new JButton("400");
+			c4.setBounds(250,550,100,100);
 			this.add(c4);
-			JButton c5 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			
+			JButton c5 = new JButton("500");
+			c5.setBounds(250,700,100,100);
 			this.add(c5);
 			
 			//meme
 			
-			JButton m1 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton m1 = new JButton("100");
+			m1.setBounds(400,100,100,100);
 			this.add(m1);
-			JButton m2 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton m2 = new JButton("200");
+			m2.setBounds(400,250,100,100);
 			this.add(m2);
-			JButton m3 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton m3 = new JButton("300");
+			m3.setBounds(400,400,100,100);
 			this.add(m3);
-			cs5.setBounds(100,700,100,100);
-			JButton m4 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton m4 = new JButton("400");
+			m4.setBounds(400,550,100,100);
 			this.add(m4);
-			JButton m5 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton m5 = new JButton("500");
+			m5.setBounds(400,700,100,100);
 			this.add(m5);
 			
 			//games
 			
-			JButton g1 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton g1 = new JButton("100");
+			g1.setBounds(550,100,100,100);
 			this.add(g1);
-			JButton g2 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton g2 = new JButton("200");
+			g2.setBounds(550,250,100,100);
 			this.add(g2);
-			JButton g3 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton g3 = new JButton("300");
+			g3.setBounds(550,400,100,100);
 			this.add(g3);
-			cs5.setBounds(100,700,100,100);
-			JButton g4 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton g4 = new JButton("400");
+			g4.setBounds(550,550,100,100);
 			this.add(g4);
-			JButton g5 = new JButton("");
-			cs5.setBounds(100,700,100,100);
+			JButton g5 = new JButton("500");
+			g5.setBounds(550,700,100,100);
 			this.add(g5);
 			
+			//type
+			
+			JTextField input = new JTextField("",20);
+			this.add(input);
+			input.setBounds(100,850,550,50);
+			String answer = input.getText();
+			System.out.println(answer);
 			
 		}
 
