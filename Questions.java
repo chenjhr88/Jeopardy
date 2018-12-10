@@ -5,14 +5,16 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Questions{
-	private String question;
+	private String question, answer, category;
 	private int points;
-	private String answer;
+	private boolean isVisible;
 	
-	public Questions (String question, String answer ,int points) {
+	public Questions (String question, String answer, String category , int points, boolean isVisible) {
 		this.question = question;
 		this.answer = answer;
+		this.category = category;
 		this.points = points;
+		this.isVisible = isVisible;
 	}
 
 	/**
