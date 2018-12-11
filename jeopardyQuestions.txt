@@ -34,10 +34,10 @@ dabbing
 This is the action of raising both arms to immitate a certain consonant.
 t-posing
 200
-This dance can be seen as a funny dance that is given to new players in the game Fortnite.
+A funny dance that is given to new players in the game Fortnite.
 default dance
 300
-A meme includes a man dressed as Spiderman shouting a certain phrase talking about the current day.
+A man dressed as Spiderman shouts a certain phrase talking about the current day.
 It's Wednesday My Dudes
 400
 This meme is the action of placing the thumb and index finger in a check mark on the chin.
@@ -55,6 +55,6 @@ Warlock
 This is character in league of legends is a ghost like chain warden who collects souls.
 Thresh
 400
-This is a 9 crystal shaman card in Hearthstone in which the card activates a previously used battlecries.
+This Hearthstone card activates a previously used battlecries.
 Shudderwock
 500
