@@ -35,8 +35,14 @@ public class Board extends JPanel
 	JButton g3 = new JButton("300");
 	JButton g4 = new JButton("400");
 	JButton g5 = new JButton("500");
+	JButton enter = new JButton("ANSWER");
 	JTextField input = new JTextField("",20);
-	JLabel question = new JLabel("(Question will appear here)");
+	JLabel question = new JLabel("Player One, enter your name");
+	JLabel p1 = new JLabel("PLAYER 1 SCORE");
+	JLabel p1score = new JLabel("0");
+	JLabel p2 = new JLabel("PLAYER 2 SCORE");
+	JLabel p2score = new JLabel("0");
+	public  String qAnswer = "";
 	
 	
 		public Board() throws FileNotFoundException
@@ -63,6 +69,7 @@ public class Board extends JPanel
 		
 			cs1.setBounds(100,100,100,100);
 			this.add(cs1);
+			
 
 			cs2.setBounds(100,250,100,100);
 			this.add(cs2);
@@ -131,42 +138,199 @@ public class Board extends JPanel
 
 			//type
 
-
+			this.add(enter);
+			enter.setBounds(550,900,100,50);
 			this.add(input);
-			input.setBounds(100,900,550,50);
+			input.setBounds(100,900,450,50);
 			this.add(question);		
 			question.setBounds(100,850,550,25);
+			
+			this.add(p1);
+			this.add(p1score);
+			this.add(p2);
+			this.add(p2score);
+			p1.setBounds(700,100,100,50);
+			p1score.setBounds(750,200,50,50);
+			p2.setBounds(850,100,100,50);
+			p2score.setBounds(900,200,50,50);
 
 			Scanner inF = new Scanner(new File("jeopardyQuestions.txt"));
-			Questions[][] q = new Questions[5][4];
-			Questions holder = new Questions(" ", " ", 0);
-			for(int col = 0; col < q[0].length; col++){
-	        	for(int row = 0; row < q.length; row++) {
-	        		holder.setQuestion(inF.nextLine());
-	        		holder.setAnswer(inF.nextLine());
-	        		holder.setPoints(inF.nextInt());
-	        		
-	        		if(inF.hasNextLine())
-	        		inF.nextLine();
-	        		
-	        		q[row][col] = holder;
-	        		System.out.println(q[row][col]);
-	        	}
-	        }
+			Questions[][] q = new Questions[4][5];
+			Questions csOne = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions csTwo = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions csThree = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions csFour = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions csFive = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions cOne = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions cTwo = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions cThree = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions cFour = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions cFive = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions mOne = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions mTwo = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions mThree = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions mFour = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions mFive = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions gOne = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions gTwo = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions gThree = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions gFour = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			inF.nextLine();
+			Questions gFive = new Questions(inF.nextLine(), inF.nextLine(), inF.nextInt());
+			
+			
 			
 			cs1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(q[0][0].getQuestion());				
+					question.setText(csOne.getQuestion());
+					qAnswer = csOne.getAnswer();
 			}
 		});
+			cs2.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(csTwo.getQuestion());				
+			}
+		});
+			cs3.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(csThree.getQuestion());				
+			}
+		});
+			cs4.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(csFour.getQuestion());				
+			}
+		});
+			cs5.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(csFive.getQuestion());				
+			}
+		});
+			c1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(cOne.getQuestion());				
+			}
+		});
+			c2.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(cTwo.getQuestion());				
+			}
+		});
+			c3.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(cThree.getQuestion());				
+			}
+		});
+			c4.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(cFour.getQuestion());				
+			}
+		});
+			c5.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(cFive.getQuestion());				
+			}
+		});
+			m1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(mOne.getQuestion());				
+			}
+		});
+			m2.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(mTwo.getQuestion());				
+			}
+		});
+			m3.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(mThree.getQuestion());				
+			}
+		});
+			m4.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(mFour.getQuestion());				
+			}
+		});
+			m5.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(mFive.getQuestion());				
+			}
+		});
+			g1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(gOne.getQuestion());				
+			}
+		});
+			g2.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(gTwo.getQuestion());				
+			}
+		});
+			g3.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(gThree.getQuestion());				
+			}
+		});
+			g4.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(gFour.getQuestion());				
+			}
+		});
+			g5.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					question.setText(gFive.getQuestion());
+					
+			}
+		});
+			enter.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {	
+					int x = 0;
+					if (x == 0) {
+						Player player1 = new Player(input.getText(),0);
+						x++;
+						question.setText("Player Two, enter your name");
+						
+					}
+					else if(x == 1) {
+						Player player1 = new Player(input.getText(),0);
+						x++;
+						question.setText("Player One, click on the question you would like");
+					}
+					else
+						readText();
+			}
+		});
+
 		}
-			public void readText(java.awt.event.ActionEvent evt)
-			{
+			public void readText() {
+				
 				String answer;
 				answer = input.getText();
-				JTextField question = new JTextField(answer);
+				if (answer.contains(qAnswer)) {
+					
+					question.setText("Correct, your turn again");
+				}
+				else 
+					question.setText("Incorrect, next player"); 
 				
-				question.setVisible(true);
 
 				
 			
