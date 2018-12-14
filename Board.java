@@ -43,6 +43,10 @@ public class Board extends JPanel
 	JLabel p2 = new JLabel("PLAYER 2 SCORE");
 	JLabel p2score = new JLabel("0");
 	public  String qAnswer = "";
+	public int qPoints = 0;
+	private static int sCount = 0;
+	public int x = 0;
+	
 	
 	
 		public Board() throws FileNotFoundException
@@ -202,117 +206,140 @@ public class Board extends JPanel
 				public void actionPerformed(ActionEvent arg0) {
 					question.setText(csOne.getQuestion());
 					qAnswer = csOne.getAnswer();
+					qPoints = csOne.getPoints();
 			}
 		});
 			cs2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(csTwo.getQuestion());				
+					question.setText(csTwo.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			cs3.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(csThree.getQuestion());				
+					question.setText(csThree.getQuestion());
+					qPoints = csOne.getPoints();
 			}
 		});
 			cs4.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(csFour.getQuestion());				
+					question.setText(csFour.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			cs5.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(csFive.getQuestion());				
+					question.setText(csFive.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			c1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(cOne.getQuestion());				
+					question.setText(cOne.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			c2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(cTwo.getQuestion());				
+					question.setText(cTwo.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			c3.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(cThree.getQuestion());				
+					question.setText(cThree.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			c4.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(cFour.getQuestion());				
+					question.setText(cFour.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			c5.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(cFive.getQuestion());				
+					question.setText(cFive.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			m1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(mOne.getQuestion());				
+					question.setText(mOne.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			m2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(mTwo.getQuestion());				
+					question.setText(mTwo.getQuestion());
+					qPoints = csOne.getPoints();
 			}
 		});
 			m3.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(mThree.getQuestion());				
+					question.setText(mThree.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			m4.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(mFour.getQuestion());				
+					question.setText(mFour.getQuestion());		
+					qPoints = csOne.getPoints();
 			}
 		});
 			m5.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(mFive.getQuestion());				
+					question.setText(mFive.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			g1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(gOne.getQuestion());				
+					question.setText(gOne.getQuestion());		
+					qPoints = csOne.getPoints();
 			}
 		});
 			g2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(gTwo.getQuestion());				
+					question.setText(gTwo.getQuestion());	
+					qPoints = csOne.getPoints();
 			}
 		});
 			g3.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(gThree.getQuestion());				
+					question.setText(gThree.getQuestion());		
+					qPoints = csOne.getPoints();
 			}
 		});
 			g4.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					question.setText(gFour.getQuestion());				
+					question.setText(gFour.getQuestion());		
+					qPoints = csOne.getPoints();
 			}
 		});
 			g5.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					question.setText(gFive.getQuestion());
+					qPoints = csOne.getPoints();
 					
 			}
 		});
 			enter.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {	
-					int x = 0;
+					
 					if (x == 0) {
 						Player player1 = new Player(input.getText(),0);
-						x++;
 						question.setText("Player Two, enter your name");
-						
+						p1.setText(player1.getName() + " SCORE");
+						input.setText("");
+						x++;
 					}
 					else if(x == 1) {
-						Player player1 = new Player(input.getText(),0);
-						x++;
+						Player player2 = new Player(input.getText(),0);
+						p2.setText(player2.getName() + " SCORE");
 						question.setText("Player One, click on the question you would like");
+						input.setText("");
+						x++;
 					}
 					else
 						readText();
@@ -324,18 +351,20 @@ public class Board extends JPanel
 				
 				String answer;
 				answer = input.getText();
+				int hold = 0;
 				if (answer.contains(qAnswer)) {
 					
 					question.setText("Correct, your turn again");
+					if (sCount % 2 == 0) {
+						hold += qPoints;
+						p1score.setText(String.valueOf(hold));
+						input.setText("");
+					}
+					else {
+						question.setText("Incorrect, next player"); 
+						input.setText("");
+					}
 				}
-				else 
-					question.setText("Incorrect, next player"); 
-				
 
-				
-			
-			    
-			
 			}
-
 }
